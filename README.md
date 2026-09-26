@@ -17,4 +17,4 @@ The built-in fictional 12-clause employment agreement, clause explorer, resignat
 
 ## Deploy
 
-Import this repository into Vercel or another Next.js host and deploy with the defaults. No environment variables are required.
+GitHub Actions builds a static export and deploys it to GitHub Pages on every push to `main`. In the repository's **Settings → Pages**, set the build and deployment source to **GitHub Actions** once. The project site will be served from `https://bhuvi-d.github.io/Google-PromptWar-4/` after the workflow succeeds. No environment variables are required.
