@@ -13,7 +13,11 @@ A responsive legal document navigation MVP that connects a user's situation to c
 
 ## Demo behavior and limits
 
-The built-in fictional 12-clause employment agreement, clause explorer, resignation scenario, lawyer-prep checklist, and illustrative comparison work without an API key. Uploaded documents are analyzed in the browser. PDF text extraction loads the PDF.js worker from cdnjs; scanned/image-only PDFs need OCR, which this MVP does not include. Uploaded text is split into numbered clauses and quoted as evidence. Scenario responses use deterministic demo rules, not an LLM or legal analysis. Avoid uploading sensitive documents to a public demo.
+The built-in fictional 12-clause employment agreement, clause explorer, scenario navigator, lawyer-prep checklist, and comparison demo work without an API key. This deployment does not send contract text to an AI provider; scenario answers use deterministic rules. Uploaded documents are parsed in the browser, with a 12 MB/100-page limit; PDFs use a locally served PDF.js worker, and scanned/image-only PDFs need OCR, which is not included. Do not treat the output as legal advice.
+
+## Tests
+
+Run `npm test` for the clause parsing, evidence-quote validation, input-size guard, and wording-based scenario matching checks. The GitHub Pages workflow runs the same tests before each static export.
 
 ## Deploy
 
